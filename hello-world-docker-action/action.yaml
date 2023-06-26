@@ -1,0 +1,13 @@
+name: 'My first docker action'
+inputs:
+  who-to-greed:
+    required: true
+    default: 'world'
+outputs:
+  time:
+    description: 'Time'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
